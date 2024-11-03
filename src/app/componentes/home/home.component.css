@@ -1,0 +1,20 @@
+.receitas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .receita-box {
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .receita-box img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
