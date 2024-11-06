@@ -9,10 +9,9 @@
     <div class="receita-box" *ngFor="let receita of receitasPorCategoria[categorias.strCategory]">
       <h3>{{ receita.strMeal }}</h3>
       <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
-      <p>Receita ID: {{ receita.idMeal }}</p>
     </div>
   </div>
   
 
-  <button [routerLink]="['/categoria', categorias.strCategory]">Ver todas receitas de {{ categorias.strCategory }}</button>
+  <button [routerLink]="['/categoria', categorias.strCategory]"> Ver todas receitas de {{ categorias.strCategory }}</button>
 </div>

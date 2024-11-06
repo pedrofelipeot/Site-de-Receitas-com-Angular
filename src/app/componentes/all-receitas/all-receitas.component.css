@@ -1,0 +1,15 @@
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .recipe-box {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .recipe-box img {
+    width: 100%;
+  }
+  
