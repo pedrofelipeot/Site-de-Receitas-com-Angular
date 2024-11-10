@@ -2,9 +2,14 @@
 <img [src]="receitaDetalhe.strMealThumb" alt="{{ receitaDetalhe.strMeal }}" />
 <p><strong>Cozinha:</strong> {{ receitaDetalhe.strArea }}</p>
 <p><strong>Instruções:</strong></p>
-<p>
-  Vídeo Youtube:<a href="{{ receitaDetalhe.strYoutube }}">
-    {{ receitaDetalhe.strYoutube }}</a
-  >
+<p *ngIf="receitaDetalhe.strYoutube; else noVideo">
+  Vídeo do YouTube:
+  <a [href]="receitaDetalhe.strYoutube">
+    {{ receitaDetalhe.strYoutube }}
+  </a>
 </p>
+<ng-template #noVideo>
+  <p>Não possui vídeo</p>
+</ng-template>
+
 <p>{{ receitaDetalhe.strInstructions }}</p>
