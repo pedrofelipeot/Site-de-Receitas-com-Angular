@@ -4,5 +4,6 @@
   <div *ngFor="let receita of receita" class="recipe-box" [routerLink]="['/detalhes', receita.idMeal]">
     <h2>{{ receita.strMeal }}</h2>
     <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
+    <button routerLink="['/detalhes', receitas.idMeal]">Ver detalhes</button>
   </div>
 </div>

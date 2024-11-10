@@ -20,4 +20,9 @@ export class ReceitasService {
   getReceitasPorCategoria(categoria: string): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/filter.php?c=${categoria}`);
   }
+
+  getDetalhesReceita(id: string): Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/lookup.php?i=${id}`)
+  }
+
 }
