@@ -1,17 +1,19 @@
 <h1>Categorias de Receitas</h1>
 
-
 <div *ngFor="let categorias of categoria">
   <h2>{{ categorias.strCategory }}</h2>
-  
 
   <div class="receitas-container">
-    <div class="receita-box" *ngFor="let receita of receitasPorCategoria[categorias.strCategory]">
+    <div
+      class="receita-box"
+      *ngFor="let receita of receitasPorCategoria[categorias.strCategory]"
+    >
       <h3>{{ receita.strMeal }}</h3>
       <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
     </div>
   </div>
-  
 
-  <button [routerLink]="['/categoria', categorias.strCategory]"> Ver todas receitas de {{ categorias.strCategory }}</button>
+  <button [routerLink]="['/categoria', categorias.strCategory]">
+    Ver todas receitas de {{ categorias.strCategory }}
+  </button>
 </div>

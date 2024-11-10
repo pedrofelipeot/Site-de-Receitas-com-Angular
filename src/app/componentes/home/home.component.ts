@@ -4,7 +4,7 @@ import { ReceitasService } from '../../serviços/receitas.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'] 
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   categoria: any[] = [];
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       },
       error: (erro) => {
         console.log('Erro ao carregar categorias:', erro);
-      }
+      },
     });
   }
 
@@ -38,8 +38,11 @@ export class HomeComponent implements OnInit {
         this.receitasPorCategoria[categoria] = data.meals.slice(0, 5);
       },
       error: (erro) => {
-        console.error(`Erro ao carregar receitas da categoria ${categoria}:`, erro);
-      }
+        console.error(
+          `Erro ao carregar receitas da categoria ${categoria}:`,
+          erro
+        );
+      },
     });
   }
 }

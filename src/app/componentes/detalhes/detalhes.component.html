@@ -2,5 +2,9 @@
 <img [src]="receitaDetalhe.strMealThumb" alt="{{ receitaDetalhe.strMeal }}" />
 <p><strong>Cozinha:</strong> {{ receitaDetalhe.strArea }}</p>
 <p><strong>Instruções:</strong></p>
-<p>Vídeo Youtube:<a href="{{receitaDetalhe.strYoutube}}"> {{receitaDetalhe.strYoutube}}</a></p>
+<p>
+  Vídeo Youtube:<a href="{{ receitaDetalhe.strYoutube }}">
+    {{ receitaDetalhe.strYoutube }}</a
+  >
+</p>
 <p>{{ receitaDetalhe.strInstructions }}</p>

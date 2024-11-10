@@ -1,7 +1,15 @@
+<div *ngIf="carregando">
+  <p>Carregando receitas...</p>
+</div>
+
 <h1>Receitas da categoria {{ categoriaNome }}</h1>
 
-<div class="recipe-list">
-  <div *ngFor="let receita of receita" class="recipe-box" [routerLink]="['/detalhes', receita.idMeal]">
+<div class="recipe-list" *ngIf="!carregando">
+  <div
+    *ngFor="let receita of receita"
+    class="recipe-box"
+    [routerLink]="['/detalhes', receita.idMeal]"
+  >
     <h2>{{ receita.strMeal }}</h2>
     <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
     <button routerLink="['/detalhes', receitas.idMeal]">Ver detalhes</button>
