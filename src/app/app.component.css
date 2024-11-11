@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    background-color: orange;
+    height: 100px;
+  }
+  
+  header .logo img {
+    width: 130px;
+    height: auto;
+  }
+  
+  header .site-info {
+    flex-grow: 1; 
+    margin-left: -100px;
+    display: flex;
+    justify-content: center; 
+  }

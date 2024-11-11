@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/* Resetando margens e padding de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Centralizando apenas o conteúdo dentro da tag <main> */
+main {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  width: 80%; /* Largura do conteúdo dentro de <main> */
+  margin: 0 auto; /* Garante que o conteúdo fique centralizado na tela */
+  text-align: center; /* Centraliza o texto dentro do <main> */
+}
