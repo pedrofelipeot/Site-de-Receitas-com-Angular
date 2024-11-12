@@ -12,7 +12,7 @@
   margin: 10px;
   text-align: center;
   flex-shrink: 0; /* Impede que o card encolha caso haja muitos cards */
-  border: 1px solid #ddd; /* Adicionando borda aos cards */
+  border: 2px solid #ccc;
   border-radius: 8px; /* Borda arredondada */
   padding: 16px; /* Padding interno para dar espaçamento ao conteúdo do card */
   background-color: #fafafa; /* Cor de fundo do card */
