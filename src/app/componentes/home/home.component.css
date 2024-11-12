@@ -43,9 +43,22 @@ h2 {
   text-align: center;
 }
 
-.receita-box img {
-  width: 100%;
-  border-radius: 4px;
+img {
+  max-width: 100%; /* Garante que as imagens não ultrapassem o tamanho do seu contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 12px; /* Borda arredondada nas imagens */
+  object-fit: cover; /* Garante que a imagem cubra completamente o espaço do contêiner sem distorção */
+  display: block; /* Remove espaços indesejados abaixo da imagem */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animações de transformação e sombra */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da imagem */
+  border: 2px solid #ddd; /* Borda suave ao redor da imagem */
+}
+
+/* Efeito ao passar o mouse (hover) */
+img:hover {
+  transform: scale(1.05); /* Aumenta um pouco o tamanho da imagem ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+  border-color: #FFA500; /* Altera a cor da borda para laranja quando hover */
 }
 
 button {
