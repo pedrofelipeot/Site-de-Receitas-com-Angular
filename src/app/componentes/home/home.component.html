@@ -1,8 +1,7 @@
 <main>
+  <h1>Pesquise sua receita pela categoria</h1>
   <div *ngFor="let categorias of categoria" class="categoria-container">
-    <div class="categoria-header">
-      <h2>{{ categorias.strCategory }}</h2>
-    </div>
+    <h2>{{ categorias.strCategory }}</h2>
 
     <div class="receitas-container">
       <div
@@ -11,6 +10,7 @@
       >
         <h3>{{ receita.strMeal | limitar}}</h3>
         <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
+        <button [routerLink]="['/detalhes', receita.idMeal]" >Ver receita</button>
       </div>
     </div>
 

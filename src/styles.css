@@ -14,3 +14,24 @@ main {
   margin: 0 auto; /* Garante que o conteúdo fique centralizado na tela */
   text-align: center; /* Centraliza o texto dentro do <main> */
 }
+
+button {
+  background-color: #FFA500; /* Laranja */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Efeito hover */
+button:hover {
+  background-color: #FF8C00; /* Laranja mais escuro para destaque */
+}
+
+button:active {
+  background-color: #e67600; /* Cor ainda mais escura para clique */
+}
+

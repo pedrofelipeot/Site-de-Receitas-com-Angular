@@ -2,7 +2,6 @@
   <h1>{{ receitaDetalhe.strMeal }}</h1>
   <img [src]="receitaDetalhe.strMealThumb" alt="{{ receitaDetalhe.strMeal }}" />
   <p><strong>Cozinha:</strong> {{ receitaDetalhe.strArea }}</p>
-  <p><strong>Instruções:</strong></p>
   <p *ngIf="receitaDetalhe.strYoutube; else noVideo">
     Vídeo do YouTube:
     <a [href]="receitaDetalhe.strYoutube">
@@ -12,6 +11,6 @@
   <ng-template #noVideo>
     <p>Não possui vídeo</p>
   </ng-template>
-  
+  <p><strong>Instruções:</strong></p>
   <p>{{ receitaDetalhe.strInstructions }}</p>
 </main>

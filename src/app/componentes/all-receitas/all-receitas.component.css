@@ -1,15 +1,57 @@
 .recipe-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .recipe-box {
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .recipe-box img {
-    width: 100%;
-  }
-  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+  gap: 16px; /* Espaçamento entre os cards */
+  width: 100%;
+  padding: 16px; /* Opcional, para dar espaçamento nas bordas */
+}
+
+.recipe-box {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  flex-shrink: 0; /* Impede que o card encolha caso haja muitos cards */
+  border: 1px solid #ddd; /* Adicionando borda aos cards */
+  border-radius: 8px; /* Borda arredondada */
+  padding: 16px; /* Padding interno para dar espaçamento ao conteúdo do card */
+  background-color: #fafafa; /* Cor de fundo do card */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center; /* Centraliza os itens no card */
+  justify-content: space-between; /* Garante que haja espaço entre os elementos do card */
+  height: 100%; /* Garante que o card tenha altura total e alinha corretamente os itens */
+}
+
+.recipe-box h3 {
+  min-height: 40px; /* Garantia de altura mínima para títulos */
+  display: flex;
+  align-items: center; /* Centraliza o texto verticalmente */
+  text-align: center;
+  margin-bottom: 8px; /* Espaço entre o título e a imagem */
+}
+
+.recipe-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px; /* Espaço entre a imagem e o botão */
+}
+
+button {
+  background-color: #FFA500; /* Laranja */
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #FF8C00; /* Laranja mais escuro */
+}
+
+button:active {
+  background-color: #e67600; /* Cor ainda mais escura para clique */
+}
