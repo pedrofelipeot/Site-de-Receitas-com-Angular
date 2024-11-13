@@ -4,9 +4,7 @@
   <p><strong>Cozinha:</strong> {{ receitaDetalhe.strArea }}</p>
   <p *ngIf="receitaDetalhe.strYoutube; else noVideo">
     Vídeo do YouTube:
-    <a [href]="receitaDetalhe.strYoutube">
-      {{ receitaDetalhe.strYoutube }}
-    </a>
+    <a class="link-yt" [href]="receitaDetalhe.strYoutube"> Clique Aqui! </a>
   </p>
   <ng-template #noVideo>
     <p>Não possui vídeo</p>
