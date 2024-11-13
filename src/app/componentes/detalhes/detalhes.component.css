@@ -1,19 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap");
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
 
-p {
-  font-family: "Oswald", serif;
+.image-container {
+  flex: 1;
+  max-width: 40%; /* Reduzimos um pouco a largura da imagem para aumentar a área do texto */
+  height: 350px; /* Mantém a altura da imagem */
+  overflow: hidden; /* Garante que a imagem não ultrapasse a altura definida */
 }
-h1 {
-  font-family: "Oswald", serif;
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.titulo-principal {
+  margin-top: 30px;
+  margin-bottom: 30px;
+} 
+.details-container {
+  flex: 2; /* O texto ocupa mais espaço agora */
+  max-width: 55%; /* Aumentamos a largura do texto */
+  font-family: "Oswald", serif;
+  overflow-y: auto; /* Adiciona scroll para o texto, caso seja necessário */
+  height: 350px; /* Mantém a altura fixa */
+}
+
+.details-container p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+  overflow-wrap: break-word; /* Garante que o texto não ultrapasse a largura do contêiner */
+}
+
 .link-yt {
   font-family: "Oswald", serif;
   background-color: #ffa500;
   color: black;
   text-decoration: none;
-  border-radius: 6px 6px 6px 6px;
+  border-radius: 6px;
   padding: 3px;
 }
+
 .link-yt:hover {
   transition: 1s;
   border-radius: 6px 0px 6px 0px;

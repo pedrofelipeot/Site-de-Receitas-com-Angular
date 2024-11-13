@@ -1,69 +1,70 @@
 .recipe-list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
-  gap: 16px; /* Espaçamento entre os cards */
-  width: 100%;
-  padding: 16px; /* Opcional, para dar espaçamento nas bordas */
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .recipe-box {
   width: 200px;
   margin: 10px;
   text-align: center;
-  flex-shrink: 0; /* Impede que o card encolha caso haja muitos cards */
   border: 2px solid #ccc;
-  border-radius: 8px; /* Borda arredondada */
-  padding: 16px; /* Padding interno para dar espaçamento ao conteúdo do card */
-  background-color: #fafafa; /* Cor de fundo do card */
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: center; /* Centraliza os itens no card */
-  justify-content: space-between; /* Garante que haja espaço entre os elementos do card */
-  height: 100%; /* Garante que o card tenha altura total e alinha corretamente os itens */
+  align-items: center;
 }
-
+.titulo-principal {
+  margin-top: 60px;
+  margin-bottom: 60px;
+} 
 .recipe-box h3 {
-  min-height: 40px; /* Garantia de altura mínima para títulos */
+  min-height: 40px;
   display: flex;
-  align-items: center; /* Centraliza o texto verticalmente */
+  align-items: center;
+  justify-content: center; /* Garante que o título fique centralizado */
   text-align: center;
-  margin-bottom: 8px; /* Espaço entre o título e a imagem */
+  margin-bottom: 8px;
+  font-family: "Host Grotesk", sans-serif; /* Ajuste a fonte para combinar com o resto do projeto */
 }
 
 img {
-  max-width: 100%; /* Garante que as imagens não ultrapassem o tamanho do seu contêiner */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 12px; /* Borda arredondada nas imagens */
-  object-fit: cover; /* Garante que a imagem cubra completamente o espaço do contêiner sem distorção */
-  display: block; /* Remove espaços indesejados abaixo da imagem */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animações de transformação e sombra */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da imagem */
-  border: 2px solid #ddd; /* Borda suave ao redor da imagem */
+  margin-top: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Efeito ao passar o mouse (hover) */
 img:hover {
-  transform: scale(1.05); /* Aumenta um pouco o tamanho da imagem ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
-  border-color: #FFA500; /* Altera a cor da borda para laranja quando hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-color: #FFA500;
 }
 
 button {
-  background-color: #FFA500; /* Laranja */
+  background-color: #FFA500;
   color: white;
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 8px; /* Adiciona um espaço acima do botão para garantir alinhamento */
 }
 
 button:hover {
-  background-color: #FF8C00; /* Laranja mais escuro */
+  background-color: #FF8C00;
 }
 
 button:active {
-  background-color: #e67600; /* Cor ainda mais escura para clique */
+  background-color: #e67600;
 }

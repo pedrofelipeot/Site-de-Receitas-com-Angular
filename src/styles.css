@@ -1,4 +1,4 @@
-/* Resetando margens e padding de todos os elementos */
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -33,5 +33,27 @@ button:hover {
 
 button:active {
   background-color: #e67600; /* Cor ainda mais escura para clique */
+}
+
+/* Estilização para os Títulos */
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif; /* Defina para usar Oswald */
+  font-weight: 700; /* Ajusta o peso da fonte */
+  text-transform: uppercase; /* Deixa os títulos em maiúsculas */
+  color: #333; /* Cor escura para os títulos */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra suave para os títulos */
+}
+
+h1 {
+  font-size: 2.5rem; /* Ajusta o tamanho para h1 */
+}
+
+h2 {
+  font-size: 2rem; /* Ajusta o tamanho para h2 */
+}
+
+h3 {
+  font-size: 1.2rem; /* Ajusta o tamanho para h3 */
+  text-align: center; /* Centraliza o título */
 }
 
