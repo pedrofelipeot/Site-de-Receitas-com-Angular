@@ -12,7 +12,6 @@ h1 {
 
 h2 {
   font-weight: bold;
-  text-transform: uppercase;
   font-family: "Oswald", serif;
 }
 
@@ -32,21 +31,25 @@ h2 {
   box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
 }
 
+/* Classe que será aplicada quando houver apenas um card */
+.receitas-container.centralizar {
+  justify-content: center; /* Centraliza o único card */
+}
+
 .receita-box {
-  width: 200px; /* Aumenta o tamanho do card */
+  width: 200px; /* Tamanho fixo do card */
   border: 2px solid #ddd;
   border-radius: 8px;
-  padding: 16px; /* Aumenta o padding para dar mais espaço interno */
+  padding: 16px;
   margin-bottom: 30px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Aumenta o espaçamento entre os elementos */
+  gap: 12px;
   align-items: center;
   font-family: "Oswald", serif;
   transition: transform 0.3s ease-in-out;
 }
-
 /* Ajuste no título para garantir que ele não quebre o layout e ocupe o espaço adequadamente */
 .receita-box h3 {
   min-height: 50px; /* Garante que o título tenha um espaço mínimo adequado */

@@ -3,7 +3,8 @@
     <p>Carregando receitas...</p>
   </div>
   
-  <h2 class="titulo-principal">Tudo sobre {{ categoriaNome }}: receitas para todos os gostos</h2>
+  <h2 class="titulo-principal">{{ 'Tudo sobre ' + categoriaNome + ': receitas para todos os gostos' | titlecase }}</h2>
+
   
   <div class="recipe-list" *ngIf="!carregando">
     <div

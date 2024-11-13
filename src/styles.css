@@ -39,7 +39,6 @@ button:active {
 h1, h2, h3 {
   font-family: "Oswald", sans-serif; /* Defina para usar Oswald */
   font-weight: 700; /* Ajusta o peso da fonte */
-  text-transform: uppercase; /* Deixa os títulos em maiúsculas */
   color: #333; /* Cor escura para os títulos */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra suave para os títulos */
 }

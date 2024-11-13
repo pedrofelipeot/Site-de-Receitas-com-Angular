@@ -3,14 +3,16 @@
   <div *ngFor="let categorias of categoria" class="categoria-container">
     <h2>{{ categorias.strCategory }}</h2>
 
-    <div class="receitas-container">
+    <div 
+      class="receitas-container"
+      [ngClass]="{'centralizar': receitasPorCategoria[categorias.strCategory] && receitasPorCategoria[categorias.strCategory].length === 1}">
+      
       <div
         class="receita-box"
-        *ngFor="let receita of receitasPorCategoria[categorias.strCategory]"
-      >
+        *ngFor="let receita of receitasPorCategoria[categorias.strCategory]">
         <h3>{{ receita.strMeal | limitar}}</h3>
         <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
-        <button [routerLink]="['/detalhes', receita.idMeal]" >Ver receita</button>
+        <button [routerLink]="['/detalhes', receita.idMeal]">Ver receita</button>
       </div>
     </div>
 

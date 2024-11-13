@@ -3,9 +3,7 @@
   justify-content: space-between;
   gap: 20px;
   align-items: flex-start;
-  margin-top: 20px;
-}
-
+} 
 .image-container {
   flex: 1;
   max-width: 40%; /* Reduzimos um pouco a largura da imagem para aumentar a área do texto */
