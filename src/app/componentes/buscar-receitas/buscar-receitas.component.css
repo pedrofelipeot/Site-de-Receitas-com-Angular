@@ -1,0 +1,72 @@
+
+  .btn-voltar:hover {
+    background-color: #45a049;
+  }
+  
+  /* Container para os resultados */
+  .resultados-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Estilo do card de receita */
+  .card-receita {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-receita:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Título da receita */
+  .titulo-receita {
+    min-height: 50px; /* Garante que o título tenha um espaço mínimo adequado */
+  font-family: "Host Grotesk", sans-serif;
+  text-align: center;
+  font-size: 1rem; /* Ajusta o tamanho da fonte */
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase; /* Mantém o título em maiúsculas */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o título */
+  }
+  
+  /* Imagem da receita */
+  .imagem-receita {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo do botão de detalhes */
+  .btn-detalhes {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  /* Estilo para a mensagem de "nenhuma receita encontrada" */
+  .no-resultados {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 30px;
+  }
+  

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReceitasService } from '../../serviços/receitas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,9 @@ import { ReceitasService } from '../../serviços/receitas.service';
 export class HomeComponent implements OnInit {
   categoria: any[] = [];
   receitasPorCategoria: { [key: string]: any[] } = {};
+  pesquisaAtiva: boolean = false; // Controla se a pesquisa está ativa
 
-  constructor(private service: ReceitasService) {}
+  constructor(private service: ReceitasService, private router: Router) {}
 
   ngOnInit(): void {
     this.listarCategoria();
@@ -38,11 +40,13 @@ export class HomeComponent implements OnInit {
         this.receitasPorCategoria[categoria] = data.meals.slice(0, 5);
       },
       error: (erro) => {
-        console.error(
-          `Erro ao carregar receitas da categoria ${categoria}:`,
-          erro
-        );
+        console.error(`Erro ao carregar receitas da categoria ${categoria}:`, erro);
       },
     });
+  }
+
+  buscar(nome: string) {
+    this.pesquisaAtiva = true; // Quando a pesquisa for ativada, esconder categorias
+    this.router.navigate(['/busca'], { queryParams: { query: nome } }); // Navegar para a página de busca com o parâmetro de consulta
   }
 }

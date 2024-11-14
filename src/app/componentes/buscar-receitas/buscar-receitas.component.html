@@ -1,0 +1,14 @@
+ <!-- Exibir os resultados da pesquisa -->
+  <div *ngIf="resultados.length" class="resultados-container">
+    <div *ngFor="let receita of resultados" class="card-receita">
+      <h3 class="titulo-receita">{{ receita.strMeal | limitar }}</h3>
+      <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" class="imagem-receita" />
+      <button [routerLink]="['/detalhes', receita.idMeal]" class="btn-detalhes">Ver receita</button>
+    </div>
+  </div>
+  
+  <!-- Exibir uma mensagem caso não haja resultados -->
+  <div *ngIf="resultados.length === 0" class="no-resultados">
+    <h3>Nenhuma receita encontrada!</h3>
+  </div>
+  

@@ -1,3 +1,35 @@
+/* Container da barra de pesquisa */
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* Estilo para o campo de entrada */
+.input-pesquisa {
+  width: 300px;  /* Largura do campo */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+
+/* Estilo para o botão de busca */
+.btn-pesquisar {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 .categoria-container {
   border: 2px solid #ccc;
   padding: 16px;
