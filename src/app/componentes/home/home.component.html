@@ -7,19 +7,12 @@
   
 
   <!-- Exibindo as Categorias -->
-  <div *ngIf="!pesquisaAtiva">
+  : <div *ngIf="!pesquisaAtiva">
     <h2 class="titulo-principal">Explore Nossas Categorias de Receitas</h2>
     <div *ngFor="let categorias of categoria" class="categoria-container">
       <h2>{{ categorias.strCategory }}</h2>
 
-      <div
-        class="receitas-container"
-        [ngClass]="{
-          centralizar:
-            receitasPorCategoria[categorias.strCategory] &&
-            receitasPorCategoria[categorias.strCategory].length === 1
-        }"
-      >
+      <div class="receitas-container">
         <div class="receita-box" *ngFor="let receita of receitasPorCategoria[categorias.strCategory]">
           <h3>{{ receita.strMeal | limitar }}</h3>
           <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
@@ -31,5 +24,5 @@
         Ver todas receitas de {{ categorias.strCategory }}
       </button>
     </div>
-  </div>
+  </div> 
 </main>

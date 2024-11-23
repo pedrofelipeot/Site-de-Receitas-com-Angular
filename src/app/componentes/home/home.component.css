@@ -57,7 +57,7 @@ h2 {
   flex-wrap: nowrap; /* Impede que os cards quebrem para uma nova linha */
   gap: 16px;
   margin-top: 16px;
-  justify-content: flex-start; /* Alinha os cards no início da linha */
+  justify-content: center; /* Alinha os cards no início da linha */
   overflow-x: auto; /* Permite que o container role horizontalmente, se necessário */
   width: 100%; /* Garante que o container ocupe toda a largura disponível */
   box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
