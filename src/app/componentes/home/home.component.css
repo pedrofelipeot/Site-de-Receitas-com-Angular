@@ -91,7 +91,8 @@ section {
 #receitas-destaque h2 {
   font-size: 24px;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 /* Container flexível para os cards */
@@ -166,7 +167,8 @@ section {
 
 #categorias-receitas h2 {
   color: #333;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
 

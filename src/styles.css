@@ -1,8 +1,5 @@
 /* Reset global */
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&display=swap');
-
 
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 * {
@@ -10,16 +7,28 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  h1{
-    font-family: "Cherry Cream Soda", system-ui;
+
+  html {
+    scroll-behavior: smooth;
   }
-  h2{
+  
+  
+  h1,h2{
     font-family: "Merienda", cursive;
   }
-  h3{
+
+  h2 {
+    font-family: "Merienda", cursive;
+    color: #FFA500; /* Cor laranja */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave no texto */
+    border: 2px solid #FFA500; /* Borda laranja */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaço interno */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
+  }
+  
+  
+  h3,p, button{
     font-family: "PT Serif", serif;
   }
-  p, button{
-    font-family: "PT Serif", serif;
-  }
+  
