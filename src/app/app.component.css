@@ -46,6 +46,8 @@
   padding: 30px 20px;
   text-align: center;
   font-family: Arial, sans-serif;
+  border-top: 2px solid #444;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
   position: relative;
 }
 
