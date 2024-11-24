@@ -1,10 +1,18 @@
-<header>
-    <div class="logo">
-     <img src="https://www.themealdb.com/images/meal-icon.png">
-    </div>
-    <div class="site-info">
-      <h1>Seu Guia de Receitas</h1>
-    </div>
-  </header>  
-  <router-outlet></router-outlet>
-  
+<header class="site-header">
+  <nav>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#receitas-destaque">Receitas em Destaque</a></li>
+      <li><a href="#categorias-receitas">Categorias de Receitas</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+<footer id="footer">
+  <div class="footer-content">
+    <p class="footer-text">Projeto desenvolvido na Matéria de <strong>Framework Front-End</strong> do curso de <strong>Ciência da Computação</strong>.</p>
+    <p class="footer-text">Desenvolvido por <strong>Pedro Felipe</strong></p>
+    <p class="footer-text">Linkedin: <a href="https://www.linkedin.com/in/pedrofelipeot/">linkedin.com/in/pedrofelipeot/</a></p>
+    <p class="footer-text">Projeto disponível no GitHub: <a href="https://github.com/pedrofelipeot/Projeto-Front-Marlon">github.com/pedrofelipeot/Projeto-Front-Marlon</a></p>
+  </div>
+</footer>

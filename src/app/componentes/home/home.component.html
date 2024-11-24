@@ -1,28 +1,47 @@
-<main>
-  <!-- Barra de Pesquisa -->
-  <div class="barra-pesquisa">
-    <input type="text" placeholder="Digite o nome da receita" #nomeInput class="input-pesquisa" />
-    <button (click)="buscar(nomeInput.value)" class="btn-pesquisar">Buscar</button>
+<section id="inicio" class="background-image">
+  <div class="overlay-container">
+    <h1 class="chamativo">Descubra as Melhores Receitas!</h1>
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Busque receitas" #input />
+      <button class="search-button" (click)="buscar(input.value)">Buscar</button>
+    </div>
   </div>
-  
+</section>
 
-  <!-- Exibindo as Categorias -->
-  : <div *ngIf="!pesquisaAtiva">
-    <h2 class="titulo-principal">Explore Nossas Categorias de Receitas</h2>
-    <div *ngFor="let categorias of categoria" class="categoria-container">
-      <h2>{{ categorias.strCategory }}</h2>
 
-      <div class="receitas-container">
-        <div class="receita-box" *ngFor="let receita of receitasPorCategoria[categorias.strCategory]">
-          <h3>{{ receita.strMeal | limitar }}</h3>
-          <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
-          <button [routerLink]="['/detalhes', receita.idMeal]">Ver receita</button>
-        </div>
-      </div>
 
-      <button [routerLink]="['/categoria', categorias.strCategory]">
-        Ver todas receitas de {{ categorias.strCategory }}
+<section id="receitas-destaque">
+  <h2>Receitas Recomendadas</h2>
+  <div class="receitas-container">
+    <div *ngFor="let receita of receitasRecomendadas" class="card">
+      <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" class="card-img">
+      <h3 class="card-title">{{ receita.strMeal }}</h3>
+      <button class="card-button" [routerLink]="['/detalhes', receita.idMeal]">Ver Receita</button>
+    </div>
+  </div>
+</section>
+
+
+<section id="categorias-receitas">
+  <h2>Categorias de Receitas</h2>
+  <div class="categorias-container">
+    <div *ngFor="let categoria of categoria" class="categoria-card">
+      <img *ngIf="receitasPorCategoria[categoria.strCategory] && receitasPorCategoria[categoria.strCategory].length > 0"
+     [src]="receitasPorCategoria[categoria.strCategory][0]?.strMealThumb"
+     alt="Imagem da categoria"
+     class="categoria-img" />
+
+      <h3 class="categoria-title">{{ categoria.strCategory }}</h3>
+      <button
+        class="categoria-button"
+        [routerLink]="['/categoria', categoria.strCategory]"
+      >
+        Ver Mais
       </button>
     </div>
-  </div> 
-</main>
+  </div>
+</section>
+
+
+
+

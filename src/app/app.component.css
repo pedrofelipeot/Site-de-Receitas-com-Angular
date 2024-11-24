@@ -1,25 +1,77 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
-  display: flex;
-  align-items: center;
+/* Estilo do cabeçalho */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: orange;
-  height: 100px;
-  font-family: "Hubot Sans", sans-serif; /* Aplica Hubot Sans ao header */
-}
-
-header .logo img {
-  width: 130px;
-  height: auto;
-}
-
-header .site-info {
-  flex-grow: 1;
-  margin-left: -100px;
+  z-index: 1000;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 70px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicionando a fonte PT Serif no nav */
+.site-header nav {
+  font-family: "PT Serif", serif;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Aumentando o espaçamento entre os itens */
+}
+
+.site-header nav ul li {
+  display: inline;
+}
+
+.site-header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.site-header nav ul li a:hover {
+  color: #ff8c00; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+#footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  margin: 10px 0;
+}
+
+.footer-text a {
+  color: #ff7f50;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  color: #ff5722;
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer strong {
+  font-weight: bold;
 }

@@ -1,134 +1,227 @@
-/* Container da barra de pesquisa */
-.barra-pesquisa {
+/* Estilo da imagem de fundo */
+.background-image {
+  background-image: url('https://img.freepik.com/free-photo/delicious-goulash-stew-table_23-2149371729.jpg?t=st=1732389702~exp=1732393302~hmac=65c559c6fb1374868f44b9317f8df501bd0f0b77a188d088f49bc969bfd87229&w=900');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  position: relative;
+}
+
+/* Contêiner do título e buscador com fundo escuro */
+.overlay-container {
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro aplicado */
+  border-radius: 10px; /* Arredondamento opcional */
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Sombra ao redor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Estilo do título */
+.chamativo {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra no texto */
+  margin: 0;
+}
+
+/* Área do buscador */
+.search-container {
+  display: flex;
+  flex-direction: row;
   gap: 10px;
 }
 
-/* Estilo para o campo de entrada */
-.input-pesquisa {
-  width: 300px;  /* Largura do campo */
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
+.search-input {
+  width: 350px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
   border-radius: 5px;
   outline: none;
-  transition: border-color 0.3s;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-
-/* Estilo para o botão de busca */
-.btn-pesquisar {
+.search-button {
+  padding: 12px 25px;
+  background-color: orange;
   color: white;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.categoria-container {
-  border: 2px solid #ccc;
-  padding: 16px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  background-color: #fafafa;
-}
-
-h1 {
-  font-family: "Oswald", serif;
-}
-
-h2 {
+  font-size: 16px;
   font-weight: bold;
-  font-family: "Oswald", serif;
+  transition: background-color 0.3s ease;
 }
 
-.titulo-principal {
-  margin-top: 60px;
-  margin-bottom: 60px;
+.search-button:hover {
+  background-color: #ff8c00;
 }
 
+
+/* Títulos */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Seções subsequentes */
+section {
+  padding: 100px 20px;
+}
+
+/* Container da seção de receitas recomendadas */
+#receitas-destaque {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#receitas-destaque h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container flexível para os cards */
 .receitas-container {
   display: flex;
-  flex-wrap: nowrap; /* Impede que os cards quebrem para uma nova linha */
-  gap: 16px;
-  margin-top: 16px;
-  justify-content: center; /* Alinha os cards no início da linha */
-  overflow-x: auto; /* Permite que o container role horizontalmente, se necessário */
-  width: 100%; /* Garante que o container ocupe toda a largura disponível */
-  box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+  flex-wrap: wrap;
+  gap: 10px; /* Menor espaçamento entre os cards */
+  justify-content: center;
 }
 
-/* Classe que será aplicada quando houver apenas um card */
-.receitas-container.centralizar {
-  justify-content: center; /* Centraliza o único card */
-}
-
-.receita-box {
-  width: 200px; /* Tamanho fixo do card */
-  border: 2px solid #ddd;
+/* Estilo individual para os cards (diminuindo o tamanho) */
+.card {
+  background-color: #fff;
   border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 30px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-  font-family: "Oswald", serif;
-  transition: transform 0.3s ease-in-out;
-}
-/* Ajuste no título para garantir que ele não quebre o layout e ocupe o espaço adequadamente */
-.receita-box h3 {
-  min-height: 50px; /* Garante que o título tenha um espaço mínimo adequado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  font-family: "Host Grotesk", sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 220px; /* Diminuído de 280px para 220px */
   text-align: center;
-  font-size: 1rem; /* Ajusta o tamanho da fonte */
-  font-weight: 700;
-  line-height: 1.4;
-  text-transform: uppercase; /* Mantém o título em maiúsculas */
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza o título */
+  margin: 10px;
 }
 
-/* Estilização das imagens com altura ajustável */
-img {
-  margin-top: auto;
+.card-img {
   width: 100%;
-  height: 120px; /* Aumenta a altura das imagens para combinar com o tamanho do card */
-  border-radius: 12px;
+  height: 150px; /* Diminuído para ajustar o tamanho */
   object-fit: cover;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 2px solid #ddd;
+  border-bottom: 2px solid #eee;
 }
 
-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  border-color: #ffa500;
+.card-title {
+  font-size: 16px; /* Diminuído para ajustar o tamanho */
+  color: #333;
+  margin: 10px 5px; /* Ajustado para ser mais compacto */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-button {
-  margin-top: auto;
-  background-color: #ffa500;
-  color: white;
+.card-button {
+  display: inline-block;
+  padding: 8px 15px; /* Ajustado para ser mais compacto */
+  margin-top: 10px;
+  font-size: 14px; /* Ajustado para ser mais compacto */
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5722;
   border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+.card-button:active {
+  background-color: #d84315;
+  transform: scale(0.95);
+}
+
+/* Ajuste na exibição dos cards no container */
+/* Ajustes na seção de Categorias de Receitas */
+#categorias-receitas {
+  padding: 20px;
+  background-color: #fff9c4;
+}
+
+#categorias-receitas h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Container dos cards de categorias */
+.categorias-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ajustado para 4 cards por linha */
+  gap: 15px; /* Menor espaçamento entre os cards */
+  justify-items: center; /* Garante que os cards fiquem centralizados */
+  padding: 20px 0; /* Adicionado para espaçamento superior e inferior */
+}
+
+/* Estilo do card da categoria */
+.categoria-card {
+  background-color: white;
   border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  max-width: 250px; /* Diminuído para cards menores */
+}
+
+.categoria-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.categoria-img {
+  width: 100%;
+  height: 120px; /* Reduzido para um tamanho menor de imagem */
+  object-fit: cover;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.categoria-title {
+  font-weight: bold;
+  color: #333;
+  padding: 8px 0; /* Ajuste no padding */
+  margin: 0;
+}
+
+.categoria-button {
+  background-color: #ff7f50;
+  color: white;
+  padding: 8px 16px; /* Ajustado para botão menor */
+  font-size: 0.9rem; /* Tamanho do texto do botão reduzido */
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 10px 0;
 }
 
-button:hover {
-  background-color: #ff8c00;
-  transform: scale(1.1);
+.categoria-button:hover {
+  background-color: #ff5722;
 }
