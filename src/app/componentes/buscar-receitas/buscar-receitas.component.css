@@ -1,72 +1,79 @@
-
-  .btn-voltar:hover {
-    background-color: #45a049;
-  }
-  
-  /* Container para os resultados */
-  .resultados-container {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  /* Estilo do card de receita */
-  .card-receita {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .card-receita:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Título da receita */
-  .titulo-receita {
-    min-height: 50px; /* Garante que o título tenha um espaço mínimo adequado */
-  font-family: "Host Grotesk", sans-serif;
-  text-align: center;
-  font-size: 1rem; /* Ajusta o tamanho da fonte */
-  font-weight: 700;
-  line-height: 1.4;
-  text-transform: uppercase; /* Mantém o título em maiúsculas */
-  margin-bottom: 10px;
+/* Container dos resultados */
+.resultados-container {
   display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza o título */
-  }
-  
-  /* Imagem da receita */
-  .imagem-receita {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  /* Estilo do botão de detalhes */
-  .btn-detalhes {
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  /* Estilo para a mensagem de "nenhuma receita encontrada" */
-  .no-resultados {
-    text-align: center;
-    font-size: 18px;
-    color: #888;
-    margin-top: 30px;
-  }
-  
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff9c4; /* Fundo da área dos resultados */
+  border-radius: 8px;
+}
+
+/* Card de receita */
+.card-receita {
+  width: calc(25% - 16px); /* 4 cards por linha com espaçamento */
+  background-color: #ffffff; /* Fundo branco para os cards */
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden; /* Evitar que elementos ultrapassem o limite do card */
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.card-receita:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Título da receita */
+.titulo-receita {
+  margin-top: 12px;
+  font-size: 1rem; /* Fonte reduzida para harmonizar */
+  color: #FFD700; /* Cor dourada para o título */
+  font-weight: bold;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Imagem do card */
+.imagem-receita {
+  width: 100%;
+  height: 150px; /* Altura fixa para uniformizar os cards */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-receita:hover .imagem-receita {
+  transform: scale(1.1); /* Efeito de zoom na imagem */
+}
+
+/* Botão "Ver receita" */
+.btn-detalhes {
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.9rem; /* Botão menor */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 12px auto;
+  display: inline-block; /* Para centralizar no card */
+}
+
+.btn-detalhes:hover {
+  background-color: #FF8C00;
+}
+
+.btn-detalhes:active {
+  background-color: #e67600;
+}
+
+/* Mensagem de "Nenhuma receita encontrada" */
+.no-resultados {
+  text-align: center;
+  color: #FFA500; /* Cor alaranjada */
+  font-size: 1.2rem;
+  margin-top: 20px;
+}

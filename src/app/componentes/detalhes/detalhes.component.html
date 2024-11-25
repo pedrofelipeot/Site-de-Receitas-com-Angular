@@ -1,21 +1,31 @@
 <main>
   <h2 class="titulo-principal">{{ receitaDetalhe.strMeal }}</h2>
+  
+  <!-- Container principal com imagem e detalhes -->
   <div class="content">
-    <div class="image-container">
-      <img [src]="receitaDetalhe.strMealThumb" alt="{{ receitaDetalhe.strMeal }}" />
+    
+    <!-- Container para imagem e título -->
+    <div class="image-title-container">
+      <div class="image-container">
+        <img [src]="receitaDetalhe.strMealThumb" alt="{{ receitaDetalhe.strMeal }}" />
+      </div>
+      <div class="title-container">
+        <h3>{{ receitaDetalhe.strMeal }}</h3>
+      </div>
     </div>
+
+    <!-- Caixa de detalhes -->
     <div class="details-container">
       <p><strong>Cozinha:</strong> {{ receitaDetalhe.strArea }}</p>
       <p *ngIf="receitaDetalhe.strYoutube; else noVideo">
         Vídeo do YouTube:
-        <a class="link-yt" [href]="receitaDetalhe.strYoutube"> Clique Aqui! </a>
+        <a class="link-yt" [href]="receitaDetalhe.strYoutube" target="_blank">Clique Aqui!</a>
       </p>
       <ng-template #noVideo>
         <p>Não possui vídeo</p>
       </ng-template>
       <p><strong>Instruções:</strong></p>
-      <p>{{ receitaDetalhe.strInstructions}}</p>
-
+      <p>{{ receitaDetalhe.strInstructions }}</p>
     </div>
   </div>
 </main>

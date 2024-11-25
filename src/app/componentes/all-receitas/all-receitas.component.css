@@ -1,68 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
+/* Estilo do fundo da página */
+main {
+  background-color: #fff9c4; /* Fundo cinza escuro */
+  color: white; /* Texto branco para contraste */
+  padding: 20px;
+}
+
+/* Título principal */
+.titulo-principal {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffa500; /* Cor alaranjada para o título */
+}
+
+/* Lista de receitas */
+/* Lista de receitas */
 .recipe-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
+  margin: 0 auto;
+  font-family: "Oswald", serif;
 }
 
+/* Card de receita */
 .recipe-box {
-  width: 200px;
-  margin: 10px;
+  width: calc(25% - 16px); /* 4 cards por linha com espaçamento */
+  background-color: #ffffff; /* Fundo mais escuro para os cards */
   text-align: center;
-  border: 2px solid #ccc;
   border-radius: 8px;
-  padding: 16px;
-  background-color: #fafafa;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-}
-.titulo-principal {
-  margin-top: 60px;
-  margin-bottom: 60px;
-} 
-.recipe-box h3 {
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Garante que o título fique centralizado */
-  text-align: center;
-  margin-bottom: 8px;
-  font-family: "Host Grotesk", sans-serif; /* Ajuste a fonte para combinar com o resto do projeto */
+  overflow: hidden; /* Garantir que a imagem não ultrapasse o limite do card */
+  transition: transform 0.3s ease-in-out;
 }
 
-img {
-  margin-top: auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
+.recipe-box:hover {
+  transform: scale(1.05); /* Efeito de zoom nos cards */
+}
+
+/* Imagem do card */
+.recipe-box img {
+  width: 100%;
+  height: 150px; /* Tamanho reduzido para imagens */
   object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Efeito ao passar o mouse (hover) */
-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  border-color: #FFA500;
+/* Título da receita */
+.recipe-box h3 {
+  margin-top: 12px;
+  font-size: 1rem; /* Fonte reduzida para caber melhor */
+  color: #ff5722; /* Cor dourada para o título */
+  font-weight: bold;
+  text-align: center;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Oswald", serif;
 }
 
+/* Estilo do botão */
 button {
-  background-color: #FFA500;
+  background-color: #ff5722;
   color: white;
   border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 1rem;
+  padding: 6px 12px; /* Botão menor */
+  font-size: 0.9rem; /* Reduzido para harmonizar */
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 8px; /* Adiciona um espaço acima do botão para garantir alinhamento */
+  margin-top: 8px;
+  font-family: "Oswald", serif;
 }
 
 button:hover {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
 }
 
 button:active {
