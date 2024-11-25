@@ -23,8 +23,8 @@ export class ReceitasService {
   }
 
   getRandomRecipes(): Observable<any[]> {
-    const randomRecipeRequests = Array(5).fill(null).map(() => this.http.get<any>(this.baseUrl)); // Faz 5 requisições aleatórias
+    const randomRecipeRequests = Array(5).fill(null).map(() => this.http.get<any>(this.baseUrl)); 
 
-    return forkJoin(randomRecipeRequests); // Combina todas as requisições em um único Observable
+    return forkJoin(randomRecipeRequests); 
   }
 }

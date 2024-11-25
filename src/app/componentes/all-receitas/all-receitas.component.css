@@ -1,11 +1,9 @@
-/* Estilo do fundo da página */
 main {
-  background-color: #fff9c4; /* Fundo cinza escuro */
-  color: white; /* Texto branco para contraste */
+  background-color: #fff9c4; 
+  color: white; 
   padding: 20px;
 }
 
-/* Título principal */
 .titulo-principal {
   margin-top: 60px;
   margin-bottom: 40px;
@@ -13,50 +11,45 @@ main {
   font-size: 2rem;
 }
 
-/* Lista de receitas */
 .recipe-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px; /* Menor espaçamento entre os cards */
+  gap: 10px;
   margin: 0 auto;
   margin-bottom: 120px;
 }
 
-/* Card de receita */
 .recipe-box {
   font-family: "Oswald", serif;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Mudança de transição */
-  width: 220px; /* Diminuído para ajustar o tamanho */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  width: 220px; 
   text-align: center;
   margin: 10px;
 }
 
-/* Efeito de hover para o card */
 .recipe-box:hover {
-  transform: translateY(-10px); /* Levanta o card inteiro */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para destacar o card */
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-/* Imagem do card */
 .recipe-box img {
   width: 100%;
-  height: 150px; /* Diminuído para ajustar o tamanho */
+  height: 150px; 
   object-fit: cover;
   border-bottom: 2px solid #eee;
-  transition: transform 0.3s ease-in-out; /* Transição suave */
+  transition: transform 0.3s ease-in-out; 
 }
 
-/* Título da receita */
 .recipe-box h3 {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 1rem; /* Fonte reduzida para caber melhor */
-  color: #000000; /* Cor preta para o texto */
+  font-size: 1rem; 
+  color: #000000; 
   text-align: center;
   max-height: 40px;
   overflow: hidden;

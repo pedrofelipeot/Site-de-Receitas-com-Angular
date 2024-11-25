@@ -1,4 +1,3 @@
-/* Estilo do cabeçalho */
 .site-header {
   font-family: "Oswald", serif;
   position: fixed;
@@ -13,7 +12,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Adicionando a fonte PT Serif no nav */
 .site-header nav {
   font-family: "PT Serif", serif;
 }
@@ -21,8 +19,7 @@
 .site-header nav ul {
   list-style: none;
   display: flex;
-  gap: 30px; /* Aumentando o espaçamento entre os itens */
-}
+  gap: 30px; }
 
 .site-header nav ul li {
   display: inline;
@@ -31,20 +28,14 @@
 .site-header nav ul li a {
   text-decoration: none;
   color: white ;
-  padding: 5px 10px; /* Adiciona algum espaçamento interno */
-  border-radius: 5px; /* Deixa as bordas arredondadas (opcional) */
-  font-size: 18px;
+  padding: 5px 10px;   border-radius: 5px;   font-size: 18px;
   font-weight: bold;
   
 }
 
 .site-header nav ul li a:hover {
-  color: #ff8c00; /* Letra laranja */
-  background-color: #ffffff; /* Fundo branco */
-  transition: background-color 0.3s, color 0.3s; /* Suaviza a transição */
-}
+  color: #ff8c00;   background-color: #ffffff;   transition: background-color 0.3s, color 0.3s; }
 
-/* Estilo do rodapé */
 #footer {
   background-color: #333;
   color: #fff;
@@ -52,8 +43,7 @@
   text-align: center;
   font-family: Arial, sans-serif;
   border-top: 2px solid #444;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
-  position: relative;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);   position: relative;
   font-family: "Oswald", serif;
 }
 

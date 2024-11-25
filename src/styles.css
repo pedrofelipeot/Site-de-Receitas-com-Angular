@@ -1,4 +1,3 @@
-/* Reset global */
 @import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
 * {
     margin: 0;
@@ -17,12 +16,8 @@
 
   h2 {
     color: #4e4e4e; 
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra mais leve e suave */
-    border: 2px solid #FFA500; 
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 10px 20px; /* Espaço interno */
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
-  }
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);     border: 2px solid #FFA500; 
+    border-radius: 8px;     padding: 10px 20px;     background-color: rgba(255, 255, 255, 0.2);   }
   
   
   h3,p, button{
@@ -33,8 +28,7 @@
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff; /* Texto branco */
-    background-color: #6BBF59; 
+    color: #ffffff;     background-color: #6BBF59; 
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
@@ -44,13 +38,9 @@
   }
   
   button:hover {
-    background-color: #00b327; /* Azul mais escuro no hover */
-    transform: translateY(-2px); /* Efeito de elevação */
-  }
+    background-color: #00b327;     transform: translateY(-2px);   }
   
   button:active {
-    background-color: #003d80; /* Azul ainda mais escuro ao clicar */
-    transform: translateY(0); /* Retorna ao nível original */
-  }
+    background-color: #003d80;     transform: translateY(0);   }
   
   

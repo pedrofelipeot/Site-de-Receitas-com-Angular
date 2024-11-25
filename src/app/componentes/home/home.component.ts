@@ -9,21 +9,19 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   categoria: any[] = [];
-  receitasPorCategoria: { [key: string]: any[] } = {}; // Receitas por categoria
-  receitasRecomendadas: any[] = []; // Receitas recomendadas
+  receitasPorCategoria: { [key: string]: any[] } = {};
+  receitasRecomendadas: any[] = []; 
 
   constructor(private service: ReceitasService, private router: Router) {}
 
   ngOnInit(): void {
-    this.listarCategoria(); // Carrega categorias e suas respectivas receitas
+    this.listarCategoria(); 
   }
 
   listarCategoria() {
     this.service.getCategorias().subscribe({
       next: (data) => {
-        this.categoria = data.categories; // Carrega as categorias
-
-        // Para cada categoria, carrega suas respectivas receitas
+        this.categoria = data.categories;
         for (let i = 0; i < this.categoria.length; i++) {
           const categoria = this.categoria[i].strCategory;
           this.carregarReceitasPorCategoria(categoria);
@@ -38,10 +36,7 @@ export class HomeComponent implements OnInit {
   carregarReceitasPorCategoria(categoria: string) {
     this.service.getReceitasPorCategoria(categoria).subscribe({
       next: (data) => {
-        // Armazenando as receitas por categoria
         this.receitasPorCategoria[categoria] = data.meals || [];
-
-        // Quando as receitas de uma categoria são carregadas, chama a função para as receitas recomendadas
         this.carregarReceitasRecomendadas();
       },
       error: (erro) => {
@@ -51,15 +46,11 @@ export class HomeComponent implements OnInit {
   }
 
   carregarReceitasRecomendadas() {
-    // Combina todas as receitas de todas as categorias em um único array
     const todasReceitas = Object.values(this.receitasPorCategoria).flat();
-    
-    // Embaralha as receitas e pega as 5 primeiras para exibir como recomendadas
     const shuffled = todasReceitas.sort(() => 0.7 - Math.random());
     this.receitasRecomendadas = shuffled.slice(0, 7);
   }
-
   buscar(nome: string) {
-    this.router.navigate(['/busca'], { queryParams: { query: nome } }); // Navegar para a página de busca
+    this.router.navigate(['/busca'], { queryParams: { query: nome } }); 
   }
 }

@@ -1,15 +1,12 @@
 <main>
-  <!-- Título geral centralizado -->
   <div class="titulo-geral">
     <h2>Resultados da Pesquisa</h2>
   </div>
   
-  <!-- Indicador de carregamento -->
   <div *ngIf="isLoading" class="loading">
     <p>Carregando...</p>
   </div>
 
-  <!-- Exibir os resultados da pesquisa -->
   <div *ngIf="!isLoading && resultados.length" class="resultados-container">
     <div *ngFor="let receita of resultados" class="card-receita">
       <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" class="imagem-receita" />
@@ -18,7 +15,6 @@
     </div>
   </div>
   
-  <!-- Exibir uma mensagem caso não haja resultados -->
   <div *ngIf="!isLoading && resultados.length === 0" class="no-resultados">
     <h3>Nenhuma receita encontrada!</h3>
   </div>
