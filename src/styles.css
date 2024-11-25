@@ -1,7 +1,5 @@
 /* Reset global */
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -14,14 +12,13 @@
   
   
   h1,h2{
-    font-family: "Merienda", cursive;
+    font-family: "Oswald", serif;
   }
 
   h2 {
-    font-family: "Merienda", cursive;
-    color: #FFA500; /* Cor laranja */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave no texto */
-    border: 2px solid #FFA500; /* Borda laranja */
+    color: #4e4e4e; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra mais leve e suave */
+    border: 2px solid #FFA500; 
     border-radius: 8px; /* Bordas arredondadas */
     padding: 10px 20px; /* Espaço interno */
     background-color: rgba(255, 255, 255, 0.2); /* Fundo translúcido */
@@ -31,4 +28,29 @@
   h3,p, button{
     font-family: "PT Serif", serif;
   }
+
+  button {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; /* Texto branco */
+    background-color: #6BBF59; 
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #00b327; /* Azul mais escuro no hover */
+    transform: translateY(-2px); /* Efeito de elevação */
+  }
+  
+  button:active {
+    background-color: #003d80; /* Azul ainda mais escuro ao clicar */
+    transform: translateY(0); /* Retorna ao nível original */
+  }
+  
   

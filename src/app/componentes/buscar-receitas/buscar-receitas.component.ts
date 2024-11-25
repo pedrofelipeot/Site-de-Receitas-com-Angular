@@ -9,6 +9,7 @@ import { PesquisaService } from '../../serviços/pesquisa.service';
 })
 export class BuscarReceitasComponent implements OnInit {
   resultados: any[] = [];
+  isLoading: boolean = false; // Flag para controle de carregamento
 
   constructor(
     private pesquisa: PesquisaService,
@@ -26,8 +27,15 @@ export class BuscarReceitasComponent implements OnInit {
   }
 
   buscar(nome: string) {
-    this.pesquisa.buscarReceitaPorNome(nome).subscribe((data: any) => {
-      this.resultados = data.meals || []; // Atribui os resultados ou uma lista vazia se não houver resultados
-    });
+    this.isLoading = true; // Inicia o carregamento
+    this.pesquisa.buscarReceitaPorNome(nome).subscribe(
+      (data: any) => {
+        this.resultados = data.meals || []; // Atribui os resultados ou uma lista vazia se não houver resultados
+        this.isLoading = false; // Finaliza o carregamento
+      },
+      () => {
+        this.isLoading = false; // Em caso de erro, finaliza o carregamento
+      }
+    );
   }
 }

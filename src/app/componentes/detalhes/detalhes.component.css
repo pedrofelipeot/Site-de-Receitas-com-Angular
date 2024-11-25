@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
-/* Estilo geral para o conteúdo */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 .content {
   display: flex;
   flex-direction: column; /* Organiza em colunas */
@@ -12,6 +12,17 @@
   margin-right: auto;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-top: 90px;
+  text-align: center; /* Centraliza o título */
+  width: 100%; /* Garante que o título ocupe toda a largura */
+}
+
+h3 {
+  font-family: "Sour Gummy", sans-serif;
+}
+
 /* Container para imagem e título */
 .image-title-container {
   display: flex;
@@ -19,6 +30,11 @@
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   gap: 20px; /* Espaço entre a imagem e o título */
   width: 100%;
+  margin-bottom: 20px; /* Espaço abaixo da região de imagem e título */
+  background-color: #fff9c4; /* Cor de fundo suave entre imagem e título */
+  padding: 20px; /* Adiciona padding entre o conteúdo */
+  border-radius: 10px; /* Bordas arredondadas */
+  border: 2px solid #ccc; /* Borda suave entre a imagem e o título */
 }
 
 /* Estilo da imagem */
@@ -29,6 +45,7 @@
   border-radius: 10px;
   display: flex;
   justify-content: center; /* Centraliza a imagem dentro do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao redor da imagem */
 }
 
 img {
@@ -36,18 +53,34 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo do título */
 .title-container h3 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: #333;
   text-align: center; /* Centraliza o título */
   width: 70%; /* Limita a largura do título */
   font-family: "Oswald", serif;
+  line-height: 1.2; /* Adiciona espaçamento entre as linhas do título */
+  letter-spacing: 1px; /* Aumenta o espaçamento entre as letras */
+  text-transform: uppercase; /* Deixa o título em maiúsculas */
+  padding: 10px; /* Adiciona um padding para melhorar o espaço ao redor do título */
+  background-color: transparent; /* Fundo transparente para o título */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave para destacar o título */
+}
+
+/* Estilo do título quando está centralizado e estilizado */
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Centraliza o texto do título */
+  margin-top: 20px;
 }
 
 /* Estilo da caixa de detalhes */
@@ -57,9 +90,10 @@ img {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 900px; /* Limita a largura da caixa */
+  max-width: 950px; /* Ajusta a largura para combinar com o contêiner de imagem e título */
   text-align: left; /* Alinha o texto à esquerda */
   margin-top: 20px; /* Espaço entre a imagem/título e os detalhes */
+  border: 2px solid #ccc; /* Borda suave na caixa de detalhes */
 }
 
 /* Ajustes no conteúdo da caixa de detalhes */
