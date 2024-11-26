@@ -1,13 +1,14 @@
 <main>
-  <h2 class="titulo-principal">Detalhes da receita</h2>
+  <h2 class="titulo-principal">Detalhes da receita </h2>
   <div class="content">
     <div class="image-title-container">
       <div class="image-container">
-        <img [src]="receitaDetalhe.strMealThumb" alt="{{ receitaDetalhe.strMeal }}" />
+        <img [src]="receitaDetalhe.strMealThumb" alt="{{ receitaDetalhe.strMeal }}" focus/>
       </div>
-      <div class="title-container">
+      <div class="title-container" focus>
         <h3>{{ receitaDetalhe.strMeal }}</h3>
       </div>
+         
     </div>
 
     <div class="details-container">

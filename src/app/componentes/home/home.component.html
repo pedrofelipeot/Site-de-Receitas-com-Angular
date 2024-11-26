@@ -1,13 +1,13 @@
 <section id="inicio" class="background-image">
   <div class="overlay-container">
-    <h1 class="chamativo">Descubra as Melhores Receitas!</h1>
+    <h1 class="chamativo">{{ 'descubra as melhores receitas!' | titlecase }}</h1>
     <div class="search-container">
       <input
         type="text"
         class="input-pesquisa"
         placeholder="Busque por receitas"
         #input
-      />
+        (keyup.enter)="buscar(input.value)" />
       <button class="btn-pesquisar" (click)="buscar(input.value)">
         Buscar
       </button>
@@ -15,10 +15,11 @@
   </div>
 </section>
 
+
 <section id="receitas-destaque">
   <h2>Receitas Recomendadas</h2>
   <div class="receitas-container">
-    <div *ngFor="let receita of receitasRecomendadas" class="card">
+    <div *ngFor="let receita of receitasRecomendadas" class="card" appFundo>
       <img
         [src]="receita.strMealThumb"
         alt="{{ receita.strMeal }}"
@@ -35,7 +36,7 @@
 <section id="categorias-receitas">
   <h2>Categorias de Receitas</h2>
   <div class="categorias-container">
-    <div *ngFor="let categoria of categoria" class="categoria-card">
+    <div *ngFor="let categoria of categoria" class="categoria-card" appFundo>
       <img
         *ngIf="
           receitasPorCategoria[categoria.strCategory] &&

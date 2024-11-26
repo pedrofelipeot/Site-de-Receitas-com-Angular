@@ -9,7 +9,7 @@
   <div class="recipe-list" *ngIf="!carregando">
     <div
       *ngFor="let receita of receita"
-      class="recipe-box">
+      class="recipe-box" appFundo>
       <img [src]="receita.strMealThumb" alt="{{ receita.strMeal }}" />
       <h3>{{ receita.strMeal | limitar}}</h3>
       <button [routerLink]="['/detalhes', receita.idMeal]">Ver detalhes</button>

@@ -8,6 +8,8 @@ import { AllReceitasComponent } from './componentes/all-receitas/all-receitas.co
 import { DetalhesComponent } from './componentes/detalhes/detalhes.component';
 import { LimitarPipe } from './pipes/limitar.pipe';
 import { BuscarReceitasComponent } from './componentes/buscar-receitas/buscar-receitas.component';
+import { FocusDirective } from './diretivas/focus.directive';
+import { FundoDirective } from './diretivas/fundo.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { BuscarReceitasComponent } from './componentes/buscar-receitas/buscar-re
     DetalhesComponent,
     LimitarPipe,
     BuscarReceitasComponent,
+    FocusDirective,
+    FundoDirective,
 
   ],
   imports: [
